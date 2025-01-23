@@ -1,11 +1,247 @@
 body {
-    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
     background-color: #343A40;
     line-height: inherit;
+    /* Для позиционирования линий */
 }
+
+.text-none{
+    text-decoration: none;
+}
+
+
 .menu-items{
-    text-transform: uppercase;
-    color:rgba(255, 255, 255, 0.3);
+text-transform: uppercase;
+color:rgba(255, 255, 255, 0.3);
+
+}
+   /* Стили для кнопки бургера */
+   .navbar-toggler {
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:active {
+    transform: scale(0.9) rotate(10deg);
+}
+
+.bordered-text {
+display: inline-block; 
+padding:  5px 13px; 
+border: 1px solid #dee2e663; 
+border-radius: 20px; 
+text-align: center; 
+}
+
+/* ИКОНКА СТИМ*/
+.svg-link {
+    display: inline-block;
+    /* Для корректного отображения */
+}
+
+.svg-icon {
+    transition: fill 0.9s ease;
+    /* Плавный переход цвета */
+}
+
+.svg-path {
+    transition: fill 0.9s ease;
+    /* Плавный переход цвета для пути */
+}
+
+.svg-link:hover .svg-path {
+    fill: #ffffff;
+    /* Цвет при наведении */
+}
+
+
+.navbar-brand {
+    color: #495057;
+    position: relative;
+}
+
+.navbar-brand .badge {
+    text-transform: none;
+    background-color: transparent;
+    color: #eb5e28;
+    position: absolute;
+    top: -0.5px;
+    left: 92px;
+    padding: 0;
+    border: none;
+}
+
+.nav-item-lc {
+    color: #eb5e28;
+}
+
+.navbar-nav .nav-link {
+    color: #ADB5BD;
+    transition: color 0.6s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #eb5e28;
+}
+
+.video-container {
+    display: flex;
+    justify-content: flex-end;
+    /* Выровнять по правому краю */
+    margin-top: 50px;
+    /* Отступ сверху */
+}
+
+.video-player {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    /* Максимальная ширина плеера */
+    overflow: hidden;
+    /* Обрезаем содержимое */
+    border-radius: 1.2%;
+    /* Скругление углов */
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    /* Автоматическая высота для сохранения пропорций */
+    aspect-ratio: 16 / 9;
+    /* Соотношение сторон 16:9 */
+    border: none;
+    /* Убираем рамку */
+}
+
+.cont {
+    color: white;
+    text-align: right;
+    margin-left: 20%;
+}
+
+.title-word {
+    display: block;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.highlight {
+    color: #eb5e28;
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #eb5e28;
+    margin: 20px auto;
+    width: 100%;
 
 }
 
+.lead {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    color: #ADB5BD;
+    text-align: left;
+    margin-left: 30%;
+    margin-right: 30%;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+/* Стили для вертикальных полос */
+.vertical-lines {
+    position: absolute;
+    /* Абсолютное позиционирование */
+    top: 50%;
+    /* Центрируем по вертикали */
+    right: 20%;
+    /* Прижимаем к правому краю */
+    transform: translateY(-20%);
+    /* Центрируем по вертикали */
+    display: flex;
+    align-items: center;
+    /* Центрируем по вертикали полосы */
+    z-index: -1;
+
+}
+
+.line {
+    z-index: -1;
+    width: 2px;
+    /* Ширина полос */
+    height: 60vh;
+    /* Высота полос на всю высоту окна */
+    background-color: rgba(255, 255, 255, 0.09);
+    /* Цвет полос */
+    margin: 0 10px;
+    /* Отступ между полосами */
+}
+
+.stats-card {
+    background-color: #495057; /* Цвет фона плашки */
+    border-radius: 8px; /* Закругление углов */
+    padding: 1rem; /* Отступы внутри элемента */
+    color: #ffffff; /* Цвет текста */
+    max-width: 100%; /* Максимальная ширина плашки */
+    margin: 20px auto; /* Центрирование плашки на странице */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень для плашки */
+}
+
+.stat-item {
+    flex: 1; /* Равное распределение пространства между элементами */
+    margin: 0 10px; /* Отступы между элементами */
+}
+
+.stat-title {
+    font-size: 1rem; /* Размер шрифта для заголовков */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.stat-value {
+    font-size: 1.5rem; /* Размер шрифта для значений */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.stat-subtitle {
+    font-size: 0.9rem; /* Размер шрифта для подзаголовков */
+    color: rgba(255, 255, 255, 0.7); /* Цвет текста для подзаголовков */
+}
+
+.dividerer {
+    width: 2px; /* Ширина разделителя */
+    background-color: rgba(255, 255, 255, 0.3); /* Цвет разделителя */
+    height: 50px; /* Высота разделителя */
+}
+
+/* Медиа-запросы для изменения стилей на меньших экранах */
+@media (max-width: 768px) {
+    .stats-card {
+        flex-direction: column; /* Вертикальное расположение на маленьких экранах */
+    }
+
+    .dividerer {
+        height: 2px; /* Высота разделителя при вертикальном расположении */
+        width: 50px; /* Ширина разделителя */
+        margin: 10px 0; /* Отступы сверху и снизу */
+    }
+
+    .stat-title {
+        font-size: 0.9rem; /* Уменьшение размера шрифта заголовков */
+    }
+
+    .stat-value {
+        font-size: 1.2rem; /* Уменьшение размера шрифта для значений */
+    }
+    .stat-item {
+        margin: 0; /* Убираем отступы между элементами */
+        padding: 5%;
+    }
+}

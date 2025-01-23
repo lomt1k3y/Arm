@@ -49,6 +49,7 @@ final class SteamAuthController
         return $redirector->to('/'); // Переход на страницу /home
     }
 
+
     private function firstOrCreate(SteamUserDto $steamUser): User
     {
 
